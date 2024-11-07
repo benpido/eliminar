@@ -3,14 +3,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página Principal</title>
+    <title>Página Principal</title>  <!-- Título de la página -->
 </head>
 <body>
-    <h1>Hola mundo</h1>
+    <h1>Hola mundo</h1>  <!-- Encabezado principal -->
     <p>Utiliza los siguientes botones para navegar por la aplicación:</p>
-    <a href="{% url 'mostrar_formulario' %}"><button>Agregar Datos</button></a>
-    <a href="{% url 'read' %}"><button>Ver Datos</button></a>
-    <!-- Agregar un botón para editar, se activará al seleccionar un dato específico para editar -->
-    <p>Seleccione un registro en 'Ver Datos' para editarlo.</p>
+    <a href="{% url 'mostrar_formulario' %}"><button>Agregar Datos</button></a>  <!-- Botón para ir a la página de agregar datos -->
+    <a href="{% url 'read' %}"><button>Ver Datos</button></a>  <!-- Botón para ver todos los datos -->
+    <p>Seleccione un registro en 'Ver Datos' para editarlo.</p>  <!-- Mensaje indicando cómo acceder a la edición -->
 </body>
 </html>

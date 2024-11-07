@@ -3,26 +3,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tabla de Datos</title>
+    <title>Tabla de Datos</title>  <!-- Título de la página -->
 </head>
 <body>
-    <h1>Tabla de Datos</h1>
-    <table border="1">
+    <h1>Tabla de Datos</h1>  <!-- Encabezado principal -->
+    <table border="1">  <!-- Crea una tabla con borde -->
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Char Field</th>
                 <th>Integer Field</th>
-                <th>Acciones</th>
+                <th>Acciones</th>  <!-- Columna para acciones adicionales (editar) -->
             </tr>
         </thead>
         <tbody>
-            {% for item in datos %}
+            {% for item in datos %}  <!-- Itera sobre cada registro en `datos` -->
             <tr>
-                <td>{{ item.id }}</td>
-                <td>{{ item.char_field }}</td>
-                <td>{{ item.integer_field }}</td>
-                <td><a href="{% url 'editar_datos' id=item.id %}">Editar</a></td>  <!-- Enlace para editar -->
+                <td>{{ item.id }}</td>  <!-- Muestra el ID del registro -->
+                <td>{{ item.char_field }}</td>  <!-- Muestra el valor de `char_field` -->
+                <td>{{ item.integer_field }}</td>  <!-- Muestra el valor de `integer_field` -->
+                <td><a href="{% url 'editar_datos' id=item.id %}">Editar</a></td>  <!-- Enlace para editar el registro -->
             </tr>
             {% endfor %}
         </tbody>
