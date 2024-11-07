@@ -1,0 +1,16 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <p>Utiliza los siguientes botones para navegar por la aplicación:</p>
+    <a href="{% url 'mostrar_formulario' %}"><button>Agregar Datos</button></a>
+    <a href="{% url 'read' %}"><button>Ver Datos</button></a>
+    <!-- Agregar un botón para editar, se activará al seleccionar un dato específico para editar -->
+    <p>Seleccione un registro en 'Ver Datos' para editarlo.</p>
+</body>
+</html>

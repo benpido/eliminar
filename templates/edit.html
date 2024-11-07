@@ -1,0 +1,25 @@
+<!-- edit.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Datos</title>
+</head>
+<body>
+    <h1>Editar Datos</h1>
+    <form action="" method="post">  <!-- El formulario se enviará a sí mismo -->
+        {% csrf_token %}
+        
+        <label for="char_field">Texto:</label>
+        <input type="text" id="char_field" name="char_field" required value="{{ instance.char_field }}">
+        
+        <label for="integer_field">Número Entero:</label>
+        <input type="number" id="integer_field" name="integer_field" required value="{{ instance.integer_field }}">
+
+        <button type="submit">Actualizar</button>
+    </form>
+
+    <br>
+    <a href="{% url 'read' %}">Volver a la lista</a>
+</body>
+</html>
